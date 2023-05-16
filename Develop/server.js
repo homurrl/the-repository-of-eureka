@@ -26,6 +26,19 @@ app.get('/notes', (req, res) =>
 
 //post route
 
+app.post('/notes', (req, res) => {
+  // Get the data from the request body
+  const data = req.body;
+
+  // Do something with the data
+  // For example, you could save it to a database
+
+  // Send a response back to the client
+  res.json({
+    message: 'Your feedback has been submitted!'
+  });
+});
+
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
