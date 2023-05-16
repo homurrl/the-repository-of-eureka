@@ -24,27 +24,6 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-//post route
-
-app.post('/', (req, res) => {
-  console.log(req.body);
-
-  const {  } = req.body;
-
-  if (req.body) {
-    const saveNote = {
-      title,
-      body,
-      note_id: uuidv4(),
-    };
-
-    readAndAppend(newNote, './db/tips.json');
-    res.json(`Note added succesfully 🚀`);
-  } else {
-    res.error('Error in adding note');
-  }
-});
-
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
