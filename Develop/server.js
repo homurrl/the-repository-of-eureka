@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
   const {  } = req.body;
 
   if (req.body) {
-    const newNote = {
+    const saveNote = {
       title,
       body,
       note_id: uuidv4(),
