@@ -26,17 +26,23 @@ app.get('/notes', (req, res) =>
 
 //post route
 
-app.post('/notes', (req, res) => {
-  // Get the data from the request body
-  const data = req.body;
+app.post('/', (req, res) => {
+  console.log(req.body);
 
-  // Do something with the data
-  // For example, you could save it to a database
+  const {  } = req.body;
 
-  // Send a response back to the client
-  res.json({
-    message: 'Your feedback has been submitted!'
-  });
+  if (req.body) {
+    const newNote = {
+      title,
+      body,
+      note_id: uuidv4(),
+    };
+
+    readAndAppend(newNote, './db/tips.json');
+    res.json(`Note added succesfully 🚀`);
+  } else {
+    res.error('Error in adding note');
+  }
 });
 
 app.listen(PORT, () =>
