@@ -1,4 +1,12 @@
-A note taking app that stores information and retrieves it from the local database. 
+A note taking app that stores information and retrieves it from the local database. It uses API get and post routes to store information to a local database.
+
+Features: 
+*Enter information in separate blocks
+*Saves data after application is closed
+
+To be implemented: 
+*Delete function 
+Multiple user functionality
 
 
 
